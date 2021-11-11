@@ -1,17 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Evaluation JS</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="jquery-3.6.0.js"></script>
-    <script type="text/javascript" src="script.js" async></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="BVSelect Jquery">
+  <meta name="author" content="Bruno Vieira">
+
+  <title>BVAmbient - VanillaJS Particle Background</title>
+  <link rel="stylesheet" type="text/css" href="css/bvambient.css">
+  <!-- *** OPTIONAL *** -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="demo-template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 
-<h1>test GIT web</h1>
+
+<body style="min-height:1000px; overflow:hidden;">
+  
+  <h1>test GIT web</h1>
+
+    <!-- Ambient Main Div -->
+    <div id="ambient" style="overflow:hidden; position:absolute; width:100%; height:100vh;"></div>
+
+    <script src="js/bvambient.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+          var demo1 = new BVAmbient({
+            selector: "#ambient",
+            fps: 60,
+            max_transition_speed: 12000,
+            min_transition_speed: 8000,
+            particle_number: 30,
+            particle_maxwidth: 60,
+            particle_minwidth: 10,
+            particle_radius: 50,
+            particle_opacity: true,
+            particle_colision_change: true,
+            particle_background: "#58c70c",
+            refresh_onfocus: true,
+            particle_image: {
+              image: false,
+              src: ""
+            },
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    particle_number: "15"
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    particle_number: "10"
+                  }
+                }
+            ]
+          });
+    });
+    </script>
+
+</body>
+</html>
