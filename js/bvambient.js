@@ -11,7 +11,7 @@ class BVAmbient {
         particle_radius = "50",
         particle_opacity = true,
         particle_colision_change = true,
-        particle_background = "#ededed",
+        particle_background = "#257745",
         particle_image = {
             image: false,
             src: ""
